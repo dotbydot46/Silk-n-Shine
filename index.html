@@ -3,268 +3,264 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Silk n Shine Barbers Croydon | Website Concept</title>
+  <title>Silk n Shine Barbers Croydon | Premium Website Concept</title>
   <meta name="description" content="Silk n Shine Barbers in Croydon. Haircuts, skin fades, beard trims and hot towel shaves at 53 Lower Addiscombe Road." />
+  <meta name="theme-color" content="#070707" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --black:#070707;
-      --soft:#111111;
-      --card:#171411;
-      --gold:#d6aa58;
-      --gold2:#f2d28a;
-      --wood:#9b642d;
-      --cream:#f7efe2;
-      --muted:#c9c1b5;
-      --line:rgba(255,255,255,.11);
-    }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
-    body { font-family:Inter, Arial, sans-serif; background:var(--black); color:#fff; line-height:1.6; }
-    a { color:inherit; text-decoration:none; }
-    img { max-width:100%; display:block; }
-    .topbar { background:linear-gradient(90deg,var(--gold),var(--gold2)); color:#17110a; font-weight:900; text-align:center; padding:10px 16px; font-size:.92rem; }
-    nav { position:sticky; top:0; z-index:100; background:rgba(7,7,7,.9); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
-    .nav-inner { max-width:1220px; margin:auto; padding:16px 22px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
-    .logo { display:flex; align-items:center; gap:10px; font-weight:950; letter-spacing:-.05em; font-size:1.32rem; }
-    .pole { width:30px; height:42px; border-radius:15px; border:2px solid #fff; background:repeating-linear-gradient(-35deg,#fff 0 6px,#c01822 6px 13px,#fff 13px 19px,#174d94 19px 26px); box-shadow:0 0 0 3px rgba(214,170,88,.18); }
-    .logo span { color:var(--gold); }
-    .nav-links { display:flex; align-items:center; gap:23px; font-weight:750; color:#e8e0d7; font-size:.94rem; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:13px 19px; border-radius:999px; font-weight:900; transition:.2s ease; border:1px solid transparent; }
-    .btn:hover { transform:translateY(-2px); }
-    .btn-gold { background:linear-gradient(135deg,var(--gold),var(--gold2)); color:#17110a; box-shadow:0 10px 28px rgba(214,170,88,.24); }
-    .btn-outline { border-color:rgba(255,255,255,.22); background:rgba(255,255,255,.08); }
-    .hero { min-height:88vh; display:flex; align-items:center; position:relative; overflow:hidden; background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.66),rgba(0,0,0,.23)), url('assets/silk-n-shine-2.jpeg'); background-size:cover; background-position:center; }
-    .hero:after { content:""; position:absolute; inset:auto 0 0 0; height:160px; background:linear-gradient(transparent,var(--black)); }
-    .container { width:100%; max-width:1220px; margin:auto; padding:0 22px; position:relative; z-index:2; }
-    .hero-content { max-width:760px; padding:88px 0; }
-    .eyebrow { color:var(--gold2); letter-spacing:.18em; text-transform:uppercase; font-weight:950; font-size:.78rem; margin-bottom:16px; }
-    h1,h2 { font-family:"Playfair Display", Georgia, serif; font-weight:900; line-height:.95; }
-    h1 { font-size:clamp(3.2rem,7.5vw,7.4rem); letter-spacing:-.06em; margin-bottom:24px; }
-    .hero p { color:#f1e9df; font-size:1.2rem; max-width:650px; margin-bottom:30px; }
-    .hero-actions { display:flex; flex-wrap:wrap; gap:13px; }
-    .trust-row { display:flex; gap:18px; flex-wrap:wrap; margin-top:30px; color:#e8ded2; font-weight:800; }
-    .trust-row div { background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.13); padding:10px 14px; border-radius:999px; }
-    section { padding:88px 0; }
-    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:-46px; z-index:5; position:relative; }
-    .stat { background:linear-gradient(180deg,#1a1714,#111); border:1px solid rgba(214,170,88,.24); border-radius:26px; padding:25px; box-shadow:0 24px 70px rgba(0,0,0,.5); }
-    .stat strong { display:block; color:var(--gold2); font-size:2rem; line-height:1; margin-bottom:7px; }
-    .stat span { color:var(--muted); font-weight:700; }
-    .section-head { display:flex; align-items:end; justify-content:space-between; gap:22px; margin-bottom:34px; }
-    .section-title { max-width:740px; }
-    .section-title h2 { font-size:clamp(2.2rem,4.7vw,4.4rem); letter-spacing:-.055em; margin-bottom:13px; }
-    .section-title p { color:var(--muted); font-size:1.06rem; }
-    .services { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    .card { background:linear-gradient(180deg,#191512,#111); border:1px solid var(--line); border-radius:27px; padding:28px; position:relative; overflow:hidden; }
-    .card:before { content:""; position:absolute; inset:0; background:radial-gradient(circle at top right,rgba(214,170,88,.16),transparent 36%); pointer-events:none; }
-    .icon { width:55px; height:55px; border-radius:18px; background:linear-gradient(135deg,var(--gold),var(--gold2)); color:#120e08; display:grid; place-items:center; font-size:1.55rem; margin-bottom:18px; position:relative; }
-    .card h3 { font-size:1.32rem; margin-bottom:8px; position:relative; }
-    .card p { color:#bfb6aa; position:relative; }
-    .price { margin-top:18px; color:var(--gold2); font-weight:950; position:relative; }
-    .split { display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; }
-    .photo-card { border-radius:32px; overflow:hidden; border:1px solid rgba(214,170,88,.22); box-shadow:0 28px 80px rgba(0,0,0,.48); background:#111; }
-    .photo-card img { width:100%; height:520px; object-fit:cover; }
-    .ticks { display:grid; gap:14px; margin-top:25px; }
-    .tick { padding:16px 17px; border-radius:18px; background:rgba(255,255,255,.065); border:1px solid var(--line); color:#e9dfd4; font-weight:760; }
-    .gallery { display:grid; grid-template-columns:1.15fr .85fr; gap:18px; }
-    .gallery-main img, .gallery-small img { width:100%; object-fit:cover; border-radius:28px; border:1px solid var(--line); }
-    .gallery-main img { height:620px; }
-    .gallery-small { display:grid; gap:18px; }
-    .gallery-small img { height:301px; }
-    .booking { background:linear-gradient(135deg,rgba(214,170,88,.13),rgba(255,255,255,.04)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-    .step { background:#111; border:1px solid rgba(214,170,88,.22); padding:24px; border-radius:24px; }
-    .step b { color:var(--gold2); font-size:1.5rem; display:block; margin-bottom:7px; }
-    .reviews { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    .stars { color:var(--gold2); letter-spacing:2px; margin-bottom:14px; }
-    .quote { color:#e9ded2; font-size:1.03rem; }
-    .contact-box { background:linear-gradient(135deg,#1b1611,#0c0c0c); border:1px solid rgba(214,170,88,.26); border-radius:34px; padding:36px; display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; box-shadow:0 28px 80px rgba(0,0,0,.48); }
-    .contact-line { margin:11px 0; color:#eee2d5; font-weight:780; }
-    .map-box { min-height:260px; border-radius:26px; background:linear-gradient(135deg,rgba(214,170,88,.18),rgba(255,255,255,.05)); border:1px solid var(--line); display:grid; place-items:center; text-align:center; padding:24px; color:#dfd2c4; }
-    .floating-mobile { display:none; position:fixed; bottom:14px; left:14px; right:14px; z-index:200; gap:10px; }
-    .floating-mobile a { flex:1; }
-    footer { padding:34px 22px; border-top:1px solid var(--line); text-align:center; color:#a99f93; }
-    @media(max-width:900px) {
-      .nav-links { display:none; }
-      .nav-inner .btn { display:none; }
-      .hero { min-height:76vh; background-position:center; }
-      .stats,.services,.split,.gallery,.steps,.reviews,.contact-box { grid-template-columns:1fr; }
-      .stats { margin-top:22px; }
-      section { padding:62px 0; }
-      .section-head { display:block; }
-      .photo-card img,.gallery-main img,.gallery-small img { height:auto; max-height:520px; }
-      .hero-actions .btn { width:100%; }
-      .floating-mobile { display:flex; }
-      body { padding-bottom:78px; }
-      .topbar { font-size:.82rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="topbar">Open 7 Days • 53 Lower Addiscombe Rd, Croydon • 020 8649 9718</div>
-  <nav>
-    <div class="nav-inner">
-      <a class="logo" href="#"><span class="pole"></span> Silk n <span>Shine</span></a>
-      <div class="nav-links">
+  <div class="grain"></div>
+
+  <header class="site-header" id="top">
+    <div class="notice">
+      <span>Open 7 Days</span>
+      <span>53 Lower Addiscombe Rd, Croydon CR0 6PQ</span>
+      <span>020 8649 9718</span>
+    </div>
+
+    <nav class="navbar">
+      <a class="brand" href="#top" aria-label="Silk n Shine home">
+        <span class="barber-pole" aria-hidden="true"></span>
+        <span class="brand-text">Silk n <em>Shine</em></span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+
+      <div class="nav-menu">
         <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#booking">Booking</a>
+        <a href="#work">Our Work</a>
+        <a href="#prices">Prices</a>
+        <a href="#team">Team</a>
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
+        <a class="nav-cta" href="tel:02086499718">Call Now</a>
       </div>
-      <a class="btn btn-gold" href="tel:02086499718">Call Now</a>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="eyebrow">Silk n Shine Barbers • Croydon</div>
-        <h1>Sharp cuts. Clean fades. Confident style.</h1>
-        <p>A trusted local barbershop for modern haircuts, skin fades, beard trims and professional grooming in Lower Addiscombe, Croydon.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="tel:02086499718">Call to Book</a>
-          <a class="btn btn-outline" href="#gallery">View the Shop</a>
-          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Silk+n+Shine+53+Lower+Addiscombe+Rd+Croydon+CR0+6PQ">Get Directions</a>
-        </div>
-        <div class="trust-row">
-          <div>⭐ 4.8 Google Rating</div>
-          <div>💈 Experienced Barbers</div>
-          <div>✅ Walk-ins Welcome</div>
-        </div>
-      </div>
-    </div>
+    </nav>
   </header>
 
   <main>
-    <div class="container stats">
-      <div class="stat"><strong>4.8★</strong><span>Rated by local customers</span></div>
-      <div class="stat"><strong>100+</strong><span>Google reviews</span></div>
-      <div class="stat"><strong>7 Days</strong><span>Open every week</span></div>
-      <div class="stat"><strong>CR0 6PQ</strong><span>Lower Addiscombe Road</span></div>
-    </div>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-shine"></div>
 
-    <section id="services">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-title">
-            <div class="eyebrow">What we do</div>
-            <h2>Services & grooming</h2>
-            <p>Prices can be added from the shop’s real price list. This section helps customers understand services before they call or walk in.</p>
-          </div>
-          <a class="btn btn-outline" href="#contact">Ask for availability</a>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Croydon's premium barbershop</p>
+        <h1>Look sharp.<br><span>Feel confident.</span></h1>
+        <p class="hero-copy">Professional haircuts, clean skin fades, beard grooming and a proper barbershop experience in Lower Addiscombe.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="tel:02086499718">Book by Phone</a>
+          <a class="btn btn-glass" href="#work">View Shop</a>
+          <a class="btn btn-glass" href="https://www.google.com/maps/search/?api=1&query=Silk+n+Shine+53+Lower+Addiscombe+Rd+Croydon+CR0+6PQ">Directions</a>
         </div>
+
+        <div class="hero-trust">
+          <div><strong>4.8★</strong><span>Google rating</span></div>
+          <div><strong>100+</strong><span>customer reviews</span></div>
+          <div><strong>7 days</strong><span>open weekly</span></div>
+        </div>
+      </div>
+
+      <div class="scroll-cue">
+        <span></span>
+        Scroll
+      </div>
+    </section>
+
+    <section class="intro section">
+      <div class="container intro-grid">
+        <div class="reveal">
+          <p class="eyebrow">A better first impression</p>
+          <h2>A website that matches the quality inside the shop.</h2>
+        </div>
+        <div class="intro-card reveal">
+          <p>The current online presence does not show the premium look of Silk n Shine. This concept uses their real shop photos, black-and-gold signage, warm wood interior and strong Google reputation to create a more professional barber brand.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Services</p>
+          <h2>Barber services built for modern customers.</h2>
+          <p>Clear service cards help people choose quickly on mobile before they call, walk in or ask for directions.</p>
+        </div>
+
         <div class="services">
-          <div class="card"><div class="icon">✂️</div><h3>Gents Haircut</h3><p>Classic and modern haircut styles finished with care.</p><div class="price">Price: £—</div></div>
-          <div class="card"><div class="icon">💈</div><h3>Skin Fade</h3><p>Sharp fade work with clean blending and detailed finish.</p><div class="price">Price: £—</div></div>
-          <div class="card"><div class="icon">🧔</div><h3>Beard Trim & Shape</h3><p>Beard tidy, line-up and shaping for a cleaner look.</p><div class="price">Price: £—</div></div>
-          <div class="card"><div class="icon">🔥</div><h3>Haircut & Beard</h3><p>A complete grooming package for hair and beard together.</p><div class="price">Price: £—</div></div>
-          <div class="card"><div class="icon">👦</div><h3>Kids Haircut</h3><p>Friendly and patient service for younger customers.</p><div class="price">Price: £—</div></div>
-          <div class="card"><div class="icon">🪒</div><h3>Hot Towel Shave</h3><p>Traditional shave experience with a smooth, fresh finish.</p><div class="price">Price: £—</div></div>
+          <article class="service-card reveal"><span class="service-icon">✂️</span><h3>Gents Haircut</h3><p>Clean everyday cuts, classic styles and modern finishes.</p></article>
+          <article class="service-card reveal"><span class="service-icon">💈</span><h3>Skin Fade</h3><p>Sharp fading, smooth blending and detailed finishing.</p></article>
+          <article class="service-card reveal"><span class="service-icon">🧔</span><h3>Beard Trim</h3><p>Shape, line-up and tidy beard grooming.</p></article>
+          <article class="service-card reveal"><span class="service-icon">🔥</span><h3>Hair & Beard</h3><p>A complete grooming package for a fresh full look.</p></article>
+          <article class="service-card reveal"><span class="service-icon">👦</span><h3>Kids Haircut</h3><p>Friendly service and neat cuts for younger customers.</p></article>
+          <article class="service-card reveal"><span class="service-icon">🪒</span><h3>Hot Towel Shave</h3><p>Traditional shave experience with a clean smooth finish.</p></article>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container split">
-        <div class="photo-card"><img src="assets/silk-n-shine-1.jpeg" alt="Silk n Shine interior"></div>
-        <div>
-          <div class="eyebrow">The Silk n Shine experience</div>
-          <div class="section-title">
-            <h2>Warm interior. Professional finish.</h2>
-            <p>The shop already has a strong premium look: black chairs, wood theme, warm lights and a classic barber feel. The website should match that same identity.</p>
-          </div>
-          <div class="ticks">
-            <div class="tick">✓ Premium black, wood and gold visual theme</div>
-            <div class="tick">✓ One-click call and directions for mobile users</div>
-            <div class="tick">✓ Gallery focused on real shop photos and haircuts</div>
-            <div class="tick">✓ Google reviews and trust points shown clearly</div>
+    <section class="section split-feature">
+      <div class="container split-grid">
+        <div class="feature-image reveal"><img src="assets/interior-wide.jpeg" alt="Silk n Shine barbershop interior"></div>
+        <div class="feature-content reveal">
+          <p class="eyebrow">Premium atmosphere</p>
+          <h2>Warm wood. Black leather. Classic barber lights.</h2>
+          <p>The shop already has a strong identity. The website should not feel like a template — it should feel like Silk n Shine.</p>
+
+          <div class="quality-list">
+            <div><span>01</span><h3>Real shop photography</h3><p>No fake stock images. Real photos build trust.</p></div>
+            <div><span>02</span><h3>Mobile-first calls</h3><p>Call, directions and WhatsApp-style actions always easy.</p></div>
+            <div><span>03</span><h3>Local SEO ready</h3><p>Built around Croydon, Lower Addiscombe and barber searches.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="gallery">
+    <section class="section work-section" id="work">
       <div class="container">
-        <div class="section-title">
-          <div class="eyebrow">Real photos</div>
-          <h2>Inside the shop</h2>
-          <p>These real photos make the website feel genuine and trustworthy. Later, haircut and beard before/after photos can be added here too.</p>
+        <div class="section-head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2>Show the experience before customers arrive.</h2>
+          <p>This section can later include haircut results, fades, beard trims and before/after transformations.</p>
         </div>
-        <div class="gallery">
-          <div class="gallery-main"><img src="assets/silk-n-shine-3.jpeg" alt="Barber chairs and shop interior"></div>
-          <div class="gallery-small">
-            <img src="assets/silk-n-shine-2.jpeg" alt="Silk n Shine outside shop front">
-            <img src="assets/silk-n-shine-1.jpeg" alt="Silk n Shine barber area">
+
+        <div class="gallery reveal">
+          <figure class="gallery-item big"><img src="assets/interior-front.jpeg" alt="Inside Silk n Shine shop"><figcaption>Modern barber stations</figcaption></figure>
+          <figure class="gallery-item"><img src="assets/exterior.jpeg" alt="Silk n Shine shop front"><figcaption>Easy to find on Lower Addiscombe Road</figcaption></figure>
+          <figure class="gallery-item"><img src="assets/interior-hero.jpeg" alt="Barber chairs inside Silk n Shine"><figcaption>Comfortable waiting and grooming area</figcaption></figure>
+        </div>
+
+        <div class="portfolio-note reveal"><strong>Next upgrade:</strong> add 12–20 real haircut photos: skin fades, taper fades, beard line-ups and before/after results.</div>
+      </div>
+    </section>
+
+    <section class="section prices-section" id="prices">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Prices</p>
+          <h2>Simple price list that customers can trust.</h2>
+          <p>Final prices should be taken directly from the shop price list. This layout is ready for real prices.</p>
+        </div>
+
+        <div class="price-board reveal">
+          <div class="price-row"><span>Gents Haircut</span><strong>£—</strong></div>
+          <div class="price-row"><span>Skin Fade</span><strong>£—</strong></div>
+          <div class="price-row"><span>Haircut & Beard</span><strong>£—</strong></div>
+          <div class="price-row"><span>Beard Trim</span><strong>£—</strong></div>
+          <div class="price-row"><span>Hot Towel Shave</span><strong>£—</strong></div>
+          <div class="price-row"><span>Kids Haircut</span><strong>£—</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section before-after">
+      <div class="container ba-grid">
+        <div class="ba-content reveal">
+          <p class="eyebrow">High-converting section</p>
+          <h2>Before & after transformations.</h2>
+          <p>This is one of the most powerful sections for a barber website. Once the owner gives permission, each transformation can show the quality of the fade, beard line-up and finish.</p>
+          <a class="btn btn-gold" href="tel:02086499718">Ask for a fresh cut</a>
+        </div>
+
+        <div class="ba-card reveal">
+          <div class="ba-placeholder before"><span>Before</span></div>
+          <div class="ba-placeholder after"><span>After</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-section" id="team">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Team</p>
+          <h2>People trust faces, not only logos.</h2>
+          <p>We can add real barber photos, names and specialties after asking the team.</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card reveal"><div class="team-photo">💈</div><h3>Senior Barber</h3><p>Skin fades • Beard styling • Classic cuts</p></article>
+          <article class="team-card reveal"><div class="team-photo">✂️</div><h3>Barber Specialist</h3><p>Modern styles • Kids cuts • Taper fades</p></article>
+          <article class="team-card reveal"><div class="team-photo">🪒</div><h3>Grooming Expert</h3><p>Hot towel shave • Line-ups • Beard finish</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews-section" id="reviews">
+      <div class="container reviews-grid">
+        <div class="review-summary reveal">
+          <p class="eyebrow">Google reputation</p>
+          <h2>4.8 rated by local customers.</h2>
+          <p>Silk n Shine already has strong trust. The website should display it clearly instead of hiding it behind a poor directory page.</p>
+          <div class="rating-large">4.8 <span>★★★★★</span></div>
+          <p class="small-note">Based on 100+ Google reviews shown in the business profile.</p>
+        </div>
+
+        <div class="review-cards">
+          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“Friendly staff and consistent results.”</p><span>Google review highlight</span></article>
+          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“Great value and attention to detail.”</p><span>Google review highlight</span></article>
+          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“Skilled barbers and a welcoming shop.”</p><span>Google review highlight</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hours-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Opening hours</p>
+          <h2>Open 7 days a week.</h2>
+          <p>Exact times can be updated from Google Business Profile.</p>
+        </div>
+
+        <div class="hours-grid reveal">
+          <div><span>Monday</span><strong>09:00 – 19:00</strong></div>
+          <div><span>Tuesday</span><strong>09:00 – 19:00</strong></div>
+          <div><span>Wednesday</span><strong>09:00 – 19:00</strong></div>
+          <div><span>Thursday</span><strong>09:00 – 19:00</strong></div>
+          <div><span>Friday</span><strong>09:00 – 19:00</strong></div>
+          <div><span>Saturday</span><strong>09:00 – 19:00</strong></div>
+          <div><span>Sunday</span><strong>10:00 – 17:00</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid reveal">
+        <div class="contact-content">
+          <p class="eyebrow">Find us</p>
+          <h2>Visit Silk n Shine Barbers.</h2>
+          <p>Located on Lower Addiscombe Road, Croydon — easy to find, easy to call, easy to visit.</p>
+
+          <div class="contact-lines">
+            <a href="https://www.google.com/maps/search/?api=1&query=Silk+n+Shine+53+Lower+Addiscombe+Rd+Croydon+CR0+6PQ">📍 53 Lower Addiscombe Rd, Croydon CR0 6PQ</a>
+            <a href="tel:02086499718">📞 020 8649 9718</a>
+            <span>🕒 Open 7 Days</span>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="booking" class="booking">
-      <div class="container">
-        <div class="section-title">
-          <div class="eyebrow">Simple customer journey</div>
-          <h2>Easy booking flow</h2>
-          <p>The website can start simple with call and directions. Later, online booking can be added.</p>
-        </div>
-        <div class="steps">
-          <div class="step"><b>01</b><h3>Choose service</h3><p>Haircut, fade, beard or full package.</p></div>
-          <div class="step"><b>02</b><h3>Call the shop</h3><p>One tap from mobile to speak directly.</p></div>
-          <div class="step"><b>03</b><h3>Visit Croydon</h3><p>Google Maps directions to the shop.</p></div>
-          <div class="step"><b>04</b><h3>Leave fresh</h3><p>Look sharp and review the service.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="reviews">
-      <div class="container">
-        <div class="section-title">
-          <div class="eyebrow">Reputation</div>
-          <h2>Trusted by local customers</h2>
-          <p>Their 4.8 Google rating is one of the strongest selling points, so it should be shown proudly.</p>
-        </div>
-        <div class="reviews">
-          <div class="card"><div class="stars">★★★★★</div><p class="quote">“Friendly staff, clean cut and great value.”</p></div>
-          <div class="card"><div class="stars">★★★★★</div><p class="quote">“Professional barbers and consistent results.”</p></div>
-          <div class="card"><div class="stars">★★★★★</div><p class="quote">“Welcoming shop, sharp fades and attention to detail.”</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="contact-box">
-          <div>
-            <div class="eyebrow">Find us</div>
-            <h2>Visit Silk n Shine Barbers</h2>
-            <p class="contact-line">📍 53 Lower Addiscombe Rd, Croydon CR0 6PQ</p>
-            <p class="contact-line">📞 020 8649 9718</p>
-            <p class="contact-line">🕒 Open 7 Days</p>
-            <br>
+          <div class="contact-actions">
             <a class="btn btn-gold" href="tel:02086499718">Call Now</a>
-            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Silk+n+Shine+53+Lower+Addiscombe+Rd+Croydon+CR0+6PQ">Directions</a>
-          </div>
-          <div class="map-box">
-            <div>
-              <h3>Google Maps Embed Area</h3>
-              <p>Here we can add the live map, opening hours and Google review link.</p>
-            </div>
+            <a class="btn btn-glass" href="https://www.google.com/maps/search/?api=1&query=Silk+n+Shine+53+Lower+Addiscombe+Rd+Croydon+CR0+6PQ">Get Directions</a>
           </div>
         </div>
+
+        <div class="map-card"><div><div class="map-pin">📍</div><h3>Google Map Embed</h3><p>The live Google map will be placed here when the site goes live.</p></div></div>
       </div>
     </section>
   </main>
 
-  <div class="floating-mobile">
-    <a class="btn btn-gold" href="tel:02086499718">Call</a>
-    <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Silk+n+Shine+53+Lower+Addiscombe+Rd+Croydon+CR0+6PQ">Directions</a>
+  <footer class="footer">
+    <div class="footer-brand"><span class="barber-pole"></span><strong>Silk n <em>Shine</em></strong></div>
+    <p>Premium website concept for Silk n Shine Barbers, Croydon.</p>
+  </footer>
+
+  <div class="mobile-bar">
+    <a href="tel:02086499718">Call</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Silk+n+Shine+53+Lower+Addiscombe+Rd+Croydon+CR0+6PQ">Directions</a>
   </div>
 
-  <footer>
-    Website concept for Silk n Shine Barbers, Croydon. Built with real shop photos, mobile-first layout and premium barber styling.
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
