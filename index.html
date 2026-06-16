@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Silk n Shine Barbers Croydon | Premium Website Concept</title>
-  <meta name="description" content="Silk n Shine Barbers in Croydon. Haircuts, skin fades, beard trims and hot towel shaves at 53 Lower Addiscombe Road." />
+  <title>Silk n Shine Barbers Croydon | Booking Ready Concept</title>
+  <meta name="description" content="Silk n Shine Barbers in Croydon. Haircuts, skin fades, beard trims and booking request form at 53 Lower Addiscombe Road." />
   <meta name="theme-color" content="#070707" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,9 +33,9 @@
 
       <div class="nav-menu">
         <a href="#services">Services</a>
-        <a href="#work">Our Work</a>
+        <a href="#booking">Booking</a>
         <a href="#prices">Prices</a>
-        <a href="#team">Team</a>
+        <a href="#work">Gallery</a>
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
         <a class="nav-cta" href="tel:02086499718">Call Now</a>
@@ -54,8 +54,8 @@
         <p class="hero-copy">Professional haircuts, clean skin fades, beard grooming and a proper barbershop experience in Lower Addiscombe.</p>
 
         <div class="hero-actions">
-          <a class="btn btn-gold" href="tel:02086499718">Book by Phone</a>
-          <a class="btn btn-glass" href="#work">View Shop</a>
+          <button class="btn btn-gold open-booking" type="button">Book Appointment</button>
+          <a class="btn btn-glass" href="tel:02086499718">Call Now</a>
           <a class="btn btn-glass" href="https://www.google.com/maps/search/?api=1&query=Silk+n+Shine+53+Lower+Addiscombe+Rd+Croydon+CR0+6PQ">Directions</a>
         </div>
 
@@ -75,11 +75,11 @@
     <section class="intro section">
       <div class="container intro-grid">
         <div class="reveal">
-          <p class="eyebrow">A better first impression</p>
-          <h2>A website that matches the quality inside the shop.</h2>
+          <p class="eyebrow">Simple first version</p>
+          <h2>Call, directions and booking request — without making it complicated.</h2>
         </div>
         <div class="intro-card reveal">
-          <p>The current online presence does not show the premium look of Silk n Shine. This concept uses their real shop photos, black-and-gold signage, warm wood interior and strong Google reputation to create a more professional barber brand.</p>
+          <p>This version is built for the first stage: customers can call the shop, get directions, or send a simple booking request. Later, the booking button can be connected to Formspree, Netlify Forms, Google Forms, Booksy, Fresha or any system the owner prefers.</p>
         </div>
       </div>
     </section>
@@ -88,33 +88,122 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Services</p>
-          <h2>Barber services built for modern customers.</h2>
-          <p>Clear service cards help people choose quickly on mobile before they call, walk in or ask for directions.</p>
+          <h2>Choose a service, then request a time.</h2>
+          <p>Every service card has a booking button, so customers can start the request from the service they want.</p>
         </div>
 
         <div class="services">
-          <article class="service-card reveal"><span class="service-icon">✂️</span><h3>Gents Haircut</h3><p>Clean everyday cuts, classic styles and modern finishes.</p></article>
-          <article class="service-card reveal"><span class="service-icon">💈</span><h3>Skin Fade</h3><p>Sharp fading, smooth blending and detailed finishing.</p></article>
-          <article class="service-card reveal"><span class="service-icon">🧔</span><h3>Beard Trim</h3><p>Shape, line-up and tidy beard grooming.</p></article>
-          <article class="service-card reveal"><span class="service-icon">🔥</span><h3>Hair & Beard</h3><p>A complete grooming package for a fresh full look.</p></article>
-          <article class="service-card reveal"><span class="service-icon">👦</span><h3>Kids Haircut</h3><p>Friendly service and neat cuts for younger customers.</p></article>
-          <article class="service-card reveal"><span class="service-icon">🪒</span><h3>Hot Towel Shave</h3><p>Traditional shave experience with a clean smooth finish.</p></article>
+          <article class="service-card reveal">
+            <span class="service-icon">✂️</span>
+            <h3>Gents Haircut</h3>
+            <p>Clean everyday cuts, classic styles and modern finishes.</p>
+            <button class="mini-book open-booking" data-service="Gents Haircut" type="button">Book this</button>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">💈</span>
+            <h3>Skin Fade</h3>
+            <p>Sharp fading, smooth blending and detailed finishing.</p>
+            <button class="mini-book open-booking" data-service="Skin Fade" type="button">Book this</button>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">🧔</span>
+            <h3>Beard Trim</h3>
+            <p>Shape, line-up and tidy beard grooming.</p>
+            <button class="mini-book open-booking" data-service="Beard Trim" type="button">Book this</button>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">🔥</span>
+            <h3>Hair & Beard</h3>
+            <p>A complete grooming package for a fresh full look.</p>
+            <button class="mini-book open-booking" data-service="Hair & Beard" type="button">Book this</button>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">👦</span>
+            <h3>Kids Haircut</h3>
+            <p>Friendly service and neat cuts for younger customers.</p>
+            <button class="mini-book open-booking" data-service="Kids Haircut" type="button">Book this</button>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">🪒</span>
+            <h3>Hot Towel Shave</h3>
+            <p>Traditional shave experience with a clean smooth finish.</p>
+            <button class="mini-book open-booking" data-service="Hot Towel Shave" type="button">Book this</button>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="booking">
+      <div class="container booking-grid">
+        <div class="booking-content reveal">
+          <p class="eyebrow">Booking system</p>
+          <h2>Simple booking request form.</h2>
+          <p>The customer chooses a service, preferred date and time, then leaves their name and phone number. The shop can confirm the appointment by phone or message.</p>
+
+          <div class="booking-flow">
+            <div><span>01</span><strong>Choose service</strong><p>Haircut, fade, beard or package.</p></div>
+            <div><span>02</span><strong>Pick preferred time</strong><p>The customer suggests a date and time.</p></div>
+            <div><span>03</span><strong>Shop confirms</strong><p>The barber confirms availability.</p></div>
+          </div>
+
+          <button class="btn btn-gold open-booking" type="button">Open Booking Form</button>
+        </div>
+
+        <form class="booking-preview reveal" name="booking-preview">
+          <h3>Booking Request</h3>
+          <label>
+            Service
+            <select>
+              <option>Skin Fade</option>
+              <option>Gents Haircut</option>
+              <option>Hair & Beard</option>
+              <option>Beard Trim</option>
+            </select>
+          </label>
+          <label>
+            Preferred day
+            <input type="text" value="Friday" readonly />
+          </label>
+          <label>
+            Preferred time
+            <input type="text" value="3:30 PM" readonly />
+          </label>
+          <label>
+            Customer phone
+            <input type="text" value="07..." readonly />
+          </label>
+          <button type="button">Send request</button>
+          <p>Live form opens when the customer clicks “Book Appointment”.</p>
+        </form>
       </div>
     </section>
 
     <section class="section split-feature">
       <div class="container split-grid">
-        <div class="feature-image reveal"><img src="assets/interior-wide.jpeg" alt="Silk n Shine barbershop interior"></div>
+        <div class="feature-image reveal">
+          <img src="assets/interior-wide.jpeg" alt="Silk n Shine barbershop interior">
+        </div>
         <div class="feature-content reveal">
           <p class="eyebrow">Premium atmosphere</p>
           <h2>Warm wood. Black leather. Classic barber lights.</h2>
-          <p>The shop already has a strong identity. The website should not feel like a template — it should feel like Silk n Shine.</p>
+          <p>The shop already has a strong identity. The website should feel like Silk n Shine, not a basic template.</p>
 
           <div class="quality-list">
-            <div><span>01</span><h3>Real shop photography</h3><p>No fake stock images. Real photos build trust.</p></div>
-            <div><span>02</span><h3>Mobile-first calls</h3><p>Call, directions and WhatsApp-style actions always easy.</p></div>
-            <div><span>03</span><h3>Local SEO ready</h3><p>Built around Croydon, Lower Addiscombe and barber searches.</p></div>
+            <div>
+              <span>01</span>
+              <h3>Real shop photography</h3>
+              <p>No fake stock images. Real photos build trust.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Mobile-first actions</h3>
+              <p>Book, call and directions are always easy.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Local SEO ready</h3>
+              <p>Built around Croydon, Lower Addiscombe and barber searches.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -129,12 +218,19 @@
         </div>
 
         <div class="gallery reveal">
-          <figure class="gallery-item big"><img src="assets/interior-front.jpeg" alt="Inside Silk n Shine shop"><figcaption>Modern barber stations</figcaption></figure>
-          <figure class="gallery-item"><img src="assets/exterior.jpeg" alt="Silk n Shine shop front"><figcaption>Easy to find on Lower Addiscombe Road</figcaption></figure>
-          <figure class="gallery-item"><img src="assets/interior-hero.jpeg" alt="Barber chairs inside Silk n Shine"><figcaption>Comfortable waiting and grooming area</figcaption></figure>
+          <figure class="gallery-item big">
+            <img src="assets/interior-front.jpeg" alt="Inside Silk n Shine shop">
+            <figcaption>Modern barber stations</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/exterior.jpeg" alt="Silk n Shine shop front">
+            <figcaption>Easy to find on Lower Addiscombe Road</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/interior-hero.jpeg" alt="Barber chairs inside Silk n Shine">
+            <figcaption>Comfortable waiting and grooming area</figcaption>
+          </figure>
         </div>
-
-        <div class="portfolio-note reveal"><strong>Next upgrade:</strong> add 12–20 real haircut photos: skin fades, taper fades, beard line-ups and before/after results.</div>
       </div>
     </section>
 
@@ -143,48 +239,16 @@
         <div class="section-head reveal">
           <p class="eyebrow">Prices</p>
           <h2>Simple price list that customers can trust.</h2>
-          <p>Final prices should be taken directly from the shop price list. This layout is ready for real prices.</p>
+          <p>Final prices should be taken directly from the shop price list.</p>
         </div>
 
         <div class="price-board reveal">
-          <div class="price-row"><span>Gents Haircut</span><strong>£—</strong></div>
-          <div class="price-row"><span>Skin Fade</span><strong>£—</strong></div>
-          <div class="price-row"><span>Haircut & Beard</span><strong>£—</strong></div>
-          <div class="price-row"><span>Beard Trim</span><strong>£—</strong></div>
-          <div class="price-row"><span>Hot Towel Shave</span><strong>£—</strong></div>
-          <div class="price-row"><span>Kids Haircut</span><strong>£—</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section before-after">
-      <div class="container ba-grid">
-        <div class="ba-content reveal">
-          <p class="eyebrow">High-converting section</p>
-          <h2>Before & after transformations.</h2>
-          <p>This is one of the most powerful sections for a barber website. Once the owner gives permission, each transformation can show the quality of the fade, beard line-up and finish.</p>
-          <a class="btn btn-gold" href="tel:02086499718">Ask for a fresh cut</a>
-        </div>
-
-        <div class="ba-card reveal">
-          <div class="ba-placeholder before"><span>Before</span></div>
-          <div class="ba-placeholder after"><span>After</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section team-section" id="team">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Team</p>
-          <h2>People trust faces, not only logos.</h2>
-          <p>We can add real barber photos, names and specialties after asking the team.</p>
-        </div>
-
-        <div class="team-grid">
-          <article class="team-card reveal"><div class="team-photo">💈</div><h3>Senior Barber</h3><p>Skin fades • Beard styling • Classic cuts</p></article>
-          <article class="team-card reveal"><div class="team-photo">✂️</div><h3>Barber Specialist</h3><p>Modern styles • Kids cuts • Taper fades</p></article>
-          <article class="team-card reveal"><div class="team-photo">🪒</div><h3>Grooming Expert</h3><p>Hot towel shave • Line-ups • Beard finish</p></article>
+          <div class="price-row"><span>Gents Haircut</span><strong>£—</strong><button class="open-booking" data-service="Gents Haircut" type="button">Book</button></div>
+          <div class="price-row"><span>Skin Fade</span><strong>£—</strong><button class="open-booking" data-service="Skin Fade" type="button">Book</button></div>
+          <div class="price-row"><span>Haircut & Beard</span><strong>£—</strong><button class="open-booking" data-service="Hair & Beard" type="button">Book</button></div>
+          <div class="price-row"><span>Beard Trim</span><strong>£—</strong><button class="open-booking" data-service="Beard Trim" type="button">Book</button></div>
+          <div class="price-row"><span>Hot Towel Shave</span><strong>£—</strong><button class="open-booking" data-service="Hot Towel Shave" type="button">Book</button></div>
+          <div class="price-row"><span>Kids Haircut</span><strong>£—</strong><button class="open-booking" data-service="Kids Haircut" type="button">Book</button></div>
         </div>
       </div>
     </section>
@@ -200,9 +264,21 @@
         </div>
 
         <div class="review-cards">
-          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“Friendly staff and consistent results.”</p><span>Google review highlight</span></article>
-          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“Great value and attention to detail.”</p><span>Google review highlight</span></article>
-          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“Skilled barbers and a welcoming shop.”</p><span>Google review highlight</span></article>
+          <article class="review-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>“Friendly staff and consistent results.”</p>
+            <span>Google review highlight</span>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>“Great value and attention to detail.”</p>
+            <span>Google review highlight</span>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>“Skilled barbers and a welcoming shop.”</p>
+            <span>Google review highlight</span>
+          </article>
         </div>
       </div>
     </section>
@@ -241,24 +317,115 @@
           </div>
 
           <div class="contact-actions">
-            <a class="btn btn-gold" href="tel:02086499718">Call Now</a>
+            <button class="btn btn-gold open-booking" type="button">Book Appointment</button>
+            <a class="btn btn-glass" href="tel:02086499718">Call Now</a>
             <a class="btn btn-glass" href="https://www.google.com/maps/search/?api=1&query=Silk+n+Shine+53+Lower+Addiscombe+Rd+Croydon+CR0+6PQ">Get Directions</a>
           </div>
         </div>
 
-        <div class="map-card"><div><div class="map-pin">📍</div><h3>Google Map Embed</h3><p>The live Google map will be placed here when the site goes live.</p></div></div>
+        <div class="map-card">
+          <div class="map-pin">📍</div>
+          <h3>Google Map Embed</h3>
+          <p>The live Google map will be placed here when the site goes live.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-brand"><span class="barber-pole"></span><strong>Silk n <em>Shine</em></strong></div>
-    <p>Premium website concept for Silk n Shine Barbers, Croydon.</p>
+    <div class="footer-brand">
+      <span class="barber-pole"></span>
+      <strong>Silk n <em>Shine</em></strong>
+    </div>
+    <p>Booking-ready website concept for Silk n Shine Barbers, Croydon.</p>
   </footer>
 
   <div class="mobile-bar">
+    <button class="open-booking" type="button">Book</button>
     <a href="tel:02086499718">Call</a>
     <a href="https://www.google.com/maps/search/?api=1&query=Silk+n+Shine+53+Lower+Addiscombe+Rd+Croydon+CR0+6PQ">Directions</a>
+  </div>
+
+  <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal-backdrop close-booking"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="modal-close close-booking" type="button" aria-label="Close booking form">×</button>
+
+      <div class="modal-header">
+        <p class="eyebrow">Booking request</p>
+        <h2 id="bookingTitle">Request an appointment</h2>
+        <p>Choose your service and preferred time. The shop can confirm the final appointment by phone or message.</p>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <div class="form-row">
+          <label>
+            Full name *
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Phone number *
+            <input type="tel" name="phone" placeholder="07..." required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            Service *
+            <select name="service" id="serviceSelect" required>
+              <option value="">Select service</option>
+              <option>Gents Haircut</option>
+              <option>Skin Fade</option>
+              <option>Hair & Beard</option>
+              <option>Beard Trim</option>
+              <option>Kids Haircut</option>
+              <option>Hot Towel Shave</option>
+            </select>
+          </label>
+          <label>
+            Preferred barber
+            <select name="barber">
+              <option>Any available barber</option>
+              <option>Senior Barber</option>
+              <option>Barber Specialist</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            Preferred date *
+            <input type="date" name="date" required>
+          </label>
+          <label>
+            Preferred time *
+            <input type="time" name="time" required>
+          </label>
+        </div>
+
+        <label>
+          Notes
+          <textarea name="notes" rows="4" placeholder="Example: skin fade and beard line-up"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="btn btn-gold" type="submit">Create booking request</button>
+          <a class="btn btn-glass" href="tel:02086499718">Call instead</a>
+        </div>
+
+        <p class="form-note">Demo mode: this creates a clean booking request message. On the live website it can be connected to email, Google Forms, Formspree, Netlify Forms, Booksy or Fresha.</p>
+      </form>
+
+      <div class="booking-result" id="bookingResult" hidden>
+        <h3>Booking request ready</h3>
+        <p>Please copy this message or connect the form to email/Google Forms on the live version.</p>
+        <textarea id="bookingMessage" rows="8" readonly></textarea>
+        <div class="form-actions">
+          <button class="btn btn-gold" id="copyBooking" type="button">Copy request</button>
+          <a class="btn btn-glass" href="tel:02086499718">Call shop</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
